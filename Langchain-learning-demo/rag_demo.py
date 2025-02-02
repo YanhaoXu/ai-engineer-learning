@@ -13,10 +13,11 @@ from langchain_core.runnables import RunnableWithMessageHistory
 from langchain_openai import ChatOpenAI
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-# 构建RAG对话应用
+# 使用LangSmith
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = "LangchainDemo"
 
+# 构建RAG对话应用
 # 创建模型
 chatLLM = ChatOpenAI(
     api_key=os.getenv("DASHSCOPE_API_KEY"),
